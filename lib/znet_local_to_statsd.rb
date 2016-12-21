@@ -27,7 +27,7 @@ module ZnetLocalToStatsd
     end
 
     def get_token
-      token = read_from_config
+      token = ENV['TOKEN'] || read_from_config
       return token if test_token(token)
 
       request_token = request_request_token
