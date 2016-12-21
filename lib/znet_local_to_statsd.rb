@@ -13,6 +13,7 @@ module ZnetLocalToStatsd
       @stick_address = ENV['STICK_ADDRESS'] || "tellstick"
       @file_path = ENV['TOKEN_LOCATION'] || "#{Dir.home}/.tellstick_token"
       $statsd = Statsd.new((ENV['STATSD_ADDR'] || 'localhost'), (ENV['STATSD_PORT'] || '8125'))
+      $stdout.sync = true
 
       while true
         poll_sensors
