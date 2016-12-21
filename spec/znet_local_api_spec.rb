@@ -1,8 +1,8 @@
 require "spec_helper"
 
-describe ZnetLocalApi do
+describe  ZnetLocalToStatsd do
   it "has a version number" do
-    expect(ZnetLocalApi::VERSION).not_to be nil
+    expect( ZnetLocalToStatsd::VERSION).not_to be nil
   end
 
   it "does something useful" do
